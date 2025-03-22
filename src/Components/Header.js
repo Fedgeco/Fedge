@@ -12,7 +12,7 @@ const Header = ({ className }) => {
     { name: "Services", path: "/services" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
-    { name: "EN", path: "/en" },
+    { name: "EN", path: "#" },
   ];
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Header = ({ className }) => {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link to="/">
-          <img src="/logo.jpeg" alt="Company Logo" className="h-12 w-auto" />
+          <img src="/logo2.png" alt="Company Logo" className="h-12 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -62,12 +62,12 @@ const Header = ({ className }) => {
         </button>
       </div>
 
-      {/* Mobile Menu (Only visible when open) */}
+      {/* Mobile Menu (Updated) */}
       {isOpen && (
-        <nav className="md:hidden bg-black bg-opacity-80 border-t p-4 space-y-2">
-          {navLinks.map((link) => (
+        <nav className="md:hidden bg-black bg-opacity-80 p-4 space-y-4 text-center">
+          {navLinks.map((link, index) => (
             <Link
-              key={link.path}
+              key={index}
               to={link.path}
               className="block text-white hover:text-gray-300"
             >

@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Mail, Phone, Send } from "lucide-react";
+
+
 
 const faqs = [
   {
@@ -70,12 +73,19 @@ const FAQSection = () => {
           {showContacts ? "✖" : "➕"}
         </button>
         {showContacts && (
-          <div className="mt-4 flex justify-center space-x-6">
-            <a href="#" className="bg-blue-400 text-white p-3 rounded-full shadow-md">📩 Gmail</a>
-            <a href="#" className="bg-green-500 text-white p-3 rounded-full shadow-md">📞 WhatsApp</a>
-            <a href="#" className="bg-blue-500 text-white p-3 rounded-full shadow-md">✈️ Telegram</a>
-          </div>
-        )}
+  <div className="mt-4 flex justify-center space-x-6">
+    <a href="mailto:divine.f@fedge.com" className="bg-red-500 text-white p-3 rounded-full shadow-md">
+      <Mail className="w-6 h-6" />
+    </a>
+    <a href="https://wa.me/233209133569" className="bg-green-500 text-white p-3 rounded-full shadow-md">
+      <Phone className="w-6 h-6" />
+    </a>
+    <a href="https://t.me/233571765745" className="bg-blue-500 text-white p-3 rounded-full shadow-md">
+      <Send className="w-6 h-6" />
+    </a>
+  </div>
+)}
+
       </div>
     </section>
   );

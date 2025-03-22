@@ -5,17 +5,15 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        { name: "Consulting", path: "/consulting" },
-        { name: "Development", path: "/development" },
-        { name: "Training", path: "/training" },
-        { name: "Support", path: "/support" },
+        { name: "Consulting", path: "#" },
+        { name: "Development", path: "#" },
+        { name: "Support", path: "/contact" },
       ],
     },
     {
       title: "Company",
       links: [
         { name: "About Us", path: "/about" },
-        { name: "Our Team", path: "/team" },
         { name: "Careers", path: "/careers" },
         { name: "Contact", path: "/contact" },
       ],
@@ -23,10 +21,9 @@ const Footer = () => {
     {
       title: "Resources",
       links: [
-        { name: "Blog", path: "/blog" },
-        { name: "Case Studies", path: "/case-studies" },
-        { name: "Documentation", path: "/docs" },
-        { name: "FAQs", path: "/faqs" },
+        { name: "Blog", path: "#" },
+        { name: "Documentation", path: "#" },
+        { name: "FAQs", path: "/home" },
       ],
     },
     {
@@ -34,7 +31,7 @@ const Footer = () => {
       links: [
         { name: "Privacy Policy", path: "/privacy-policy" },
         { name: "Terms of Service", path: "/terms" },
-        { name: "Cookie Policy", path: "/cookies" },
+        { name: "Cookie Policy", path: "#" },
       ],
     },
   ];

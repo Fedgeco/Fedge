@@ -7,72 +7,64 @@ const services = [
     description:
       "We provide expert advice and tailored solutions to help businesses navigate challenges, seize opportunities, and achieve their objectives.",
     benefits: ["Improved decision-making", "Enhanced operational efficiency", "Strategies for sustainable growth"],
-    icon: <Lightbulb className="w-8 h-8 text-white" />,
+    icon: <Lightbulb className="w-10 h-10 text-white" />,
     bgColor: "from-purple-500 to-purple-400",
     textColor: "text-purple-500",
   },
   {
-    title: "Project Management Solutions",
+    title: "Time Management",
     description:
-      "Our experienced Project Leads ensure successful execution of your projects by combining expertise with proven strategies.",
-    benefits: ["Timely delivery", "Access to top-tier experts", "Streamlined processes"],
-    icon: <Clock className="w-8 h-8 text-white" />,
-    bgColor: "from-pink-500 to-pink-400",
-    textColor: "text-pink-500",
-  },
-  {
-    title: "Turnkey Business Solutions",
-    description:
-      "End-to-end management of new businesses, from startup to operational stability within 6-12 months.",
-    benefits: ["Accelerated growth", "Reduced risks", "Strategic planning"],
-    icon: <Building2 className="w-8 h-8 text-white" />,
+      "Optimize your workflow and enhance productivity with effective time management strategies and tools.",
+    benefits: ["Better work-life balance", "Increased efficiency", "Improved prioritization"],
+    icon: <Clock className="w-10 h-10 text-white" />,
     bgColor: "from-blue-500 to-blue-400",
     textColor: "text-blue-500",
   },
   {
-    title: "Grant & Contract Negotiation",
+    title: "Corporate Solutions",
     description:
-      "We secure project grants from investors and handle contract negotiations on your behalf, maximizing funding opportunities with expert compliance.",
-    benefits: ["Increased funding", "Expert negotiation", "Full compliance"],
-    icon: <FileText className="w-8 h-8 text-white" />,
-    bgColor: "from-orange-500 to-orange-400",
-    textColor: "text-orange-500",
+      "Tailored corporate solutions designed to enhance business operations and drive long-term success.",
+    benefits: ["Scalable solutions", "Improved collaboration", "Streamlined operations"],
+    icon: <Building2 className="w-10 h-10 text-white" />,
+    bgColor: "from-green-500 to-green-400",
+    textColor: "text-green-500",
+  },
+  {
+    title: "Documentation & Compliance",
+    description:
+      "Ensure seamless regulatory compliance with comprehensive documentation support and legal expertise.",
+    benefits: ["Reduced legal risks", "Accurate record-keeping", "Regulatory adherence"],
+    icon: <FileText className="w-10 h-10 text-white" />,
+    bgColor: "from-red-500 to-red-400",
+    textColor: "text-red-500",
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-gray-100 to-white">
-      <div className="container mx-auto max-w-6xl text-center">
-        <h3 className="text-sm uppercase tracking-wide text-gray-500 mb-3">What We Offer</h3>
-        <h2 className="text-5xl font-bold text-gray-900 mb-6">Our Services</h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-          Comprehensive solutions tailored to elevate your business through innovation, expertise, and strategic excellence.
+    <section className="py-24 bg-gray-100">
+      <div className="container mx-auto px-6 text-center">
+        <h2 className="text-5xl font-bold text-gray-900 mb-10">Our Services</h2>
+        <p className="text-gray-600 mb-16 max-w-3xl mx-auto">
+          We offer a wide range of services designed to empower businesses and professionals for success.
         </p>
 
-        {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {services.map((service, index) => (
-            <div key={index} className="bg-white p-8 rounded-3xl shadow-xl transition hover:shadow-2xl">
-              {/* Icon */}
-              <div className={`bg-gradient-to-r ${service.bgColor} w-14 h-14 rounded-xl flex items-center justify-center mb-6`}>
+            <div key={index} className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 w-full max-w-xs h-auto mx-auto flex flex-col"> 
+              <div className={`bg-gradient-to-r ${service.bgColor} w-16 h-16 rounded-xl flex items-center justify-center mb-6`}> 
                 {service.icon}
               </div>
 
-              {/* Title */}
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
               
-              {/* Description */}
-              <p className="text-gray-600 mb-6">{service.description}</p>
+              <p className="text-gray-600 mb-6 flex-grow text-sm md:text-base">{service.description}</p>
               
-              {/* Benefits List */}
               <ul className="space-y-3 text-left">
                 {service.benefits.map((benefit, i) => (
                   <li key={i} className="flex items-center">
-                    <span className={`w-6 h-6 rounded-full bg-opacity-20 ${service.textColor} flex items-center justify-center mr-2`}>
-                      ✓
-                    </span>
-                    {benefit}
+                    <span className={`w-7 h-7 rounded-full bg-opacity-20 ${service.textColor} flex items-center justify-center mr-3 text-lg`}>✓</span>
+                    <span className="text-sm md:text-base">{benefit}</span>
                   </li>
                 ))}
               </ul>
