@@ -66,7 +66,7 @@ export default function Contact() {
             <div className="space-y-4">
               {[
                 { icon: "📧", label: "Email", value: "info@fedgeco.io", link: "mailto:info@fedgeco.io"}, 
-                { icon: "💬", label: "WhatsApp", value: "+233 54 727 6530", link: "https://wa.me/233547276530" },
+                { icon: "💬", label: "WhatsApp", value: "+44 7886 398071", link: "https://wa.me/44 7886 398071" },
                 { icon: "💬", label: "Support", value: "support@fedgeco.io", link: "mailto:support@fedgeco.io" },
               ].map((info, index) => (
                <div key={index} className="flex items-center space-x-4">
