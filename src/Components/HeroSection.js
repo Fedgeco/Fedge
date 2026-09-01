@@ -31,7 +31,7 @@ const HeroSection = () => {
           Elevate your business with strategic insights and innovative solutions
           that drive meaningful growth.
         </p>
-        <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-full flex items-center justify-center mx-auto text-sm sm:text-base">
+        <button onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })} className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-full flex items-center justify-center mx-auto text-sm sm:text-base">
           Get started <ArrowRight className="ml-2 w-4 h-4" />
         </button>
         <div className="mt-6 md:mt-8 text-gray-300 text-xs sm:text-sm">
@@ -46,7 +46,7 @@ const HeroSection = () => {
             <ChevronDown className="text-gray-700 w-5 sm:w-6 h-5 sm:h-6" />
           </div>
         </a>
-        <button className="mt-3 px-3 sm:px-4 py-1 sm:py-2 text-gray-700 bg-white rounded-full shadow-md hover:bg-gray-100 text-xs sm:text-sm">
+        <button onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}  className="mt-3 px-3 sm:px-4 py-1 sm:py-2 text-gray-700 bg-white rounded-full shadow-md hover:bg-gray-100 text-xs sm:text-sm">
           Scroll to explore
         </button>
       </div>
