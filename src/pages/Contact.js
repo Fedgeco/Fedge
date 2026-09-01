@@ -21,7 +21,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const message = `Hi, I'd like to learn more about your services.\n\nName: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nMessage: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/233547276530?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/44 7886 398071?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
