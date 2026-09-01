@@ -14,10 +14,12 @@ const ConsultationModal = ({ isOpen, onClose }) => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Thank you, ${formData.name}. We will get back to you soon!`);
-    setFormData({ name: "", email: "", message: "" }); // Reset form
-    onClose(); // Close modal
+    const subject = "Consultation Request";
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    const mailtoUrl = `mailto:info@fedgeco.io?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+    setFormData({ name: "", email: "", message: "" });
+    onClose();
   };
 
   return (
