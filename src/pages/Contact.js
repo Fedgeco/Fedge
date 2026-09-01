@@ -63,17 +63,19 @@ export default function Contact() {
             <p className="text-gray-600 mb-6">Connect with us through any of these channels.</p>
             <div className="space-y-4">
               {[
-                { icon: "📧", label: "Email", value: "contact@fedgeconsulting.com" },
-                { icon: "📞", label: "Phone", value: "+1 (555) 123-4567" },
-                { icon: "💬", label: "Support", value: "support@fedgeconsulting.com" },
+                { icon: "📧", label: "Email", value: "info@fedgeco.io", link: "mailto:info@fedgeco.io"}, 
+                { icon: "💬", label: "WhatsApp", value: "+233 54 727 6530" link: "https://wa.me/233547276530" },
+                { icon: "💬", label: "Support", value: "support@fedgeco.io" link: "mailto:support@fedgeco.io" },
               ].map((info, index) => (
-                <div key={index} className="flex items-center space-x-4">
-                  <span className="text-2xl">{info.icon}</span>
-                  <div>
-                    <p className="font-semibold">{info.label}</p>
-                    <p className="text-gray-600">{info.value}</p>
-                  </div>
+               <div key={index} className="flex items-center space-x-4">
+                <span className="text-2xl">{info.icon}</span>
+                <div>
+                  <p className="font-semibold">{info.label}</p>
+                  <a href={info.link} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-indigo-600 hover:underline">
+                    {info.value}
+                  </a>
                 </div>
+              </div>
               ))}
             </div>
           </div>
